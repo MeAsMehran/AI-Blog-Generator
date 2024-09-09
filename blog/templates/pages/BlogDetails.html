@@ -1,0 +1,22 @@
+{#Font#}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+{% extends 'pages/base.html' %}
+{% block content %}
+	{% include 'pages/secondBase.html' %}
+    {% block secondBase %}
+    	
+        <div style="font-family: Ubuntu">
+            <h1>blog title</h1>
+            <h2>blog details</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut iusto, numquam odit quis rem velit voluptates. Accusantium aliquid consectetur, fugit itaque iure modi officia quis quisquam quo repellendus vitae.</p>
+            <h4>youtube video title</h4>
+            <p>djanog learning by projects</p>
+            <h5>youtube link</h5>
+        </div>
+        
+    {% endblock secondBase%}
+{% endblock %}

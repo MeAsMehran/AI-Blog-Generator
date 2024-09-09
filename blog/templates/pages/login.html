@@ -1,0 +1,48 @@
+
+{#Font#}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+
+{% extends 'pages/base.html' %}
+{% block content %}
+    {% include 'pages/secondBase.html' %}
+
+    {% block secondBase %}
+    
+    <br><br>
+    login page
+    <br><br>
+    
+
+    {{error}}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+{#        {{ form.as_p }}#}
+        <div>
+            <label for="username" style="font-family: Ubuntu">Username: </label>
+            <input id="username" type="text" name="username" placeholder="username..." style="border: solid #a1a0a0; font-family: Ubuntu" >
+        </div>
+        <br>
+        <div>
+            <label for="password" style="font-family: Ubuntu">Password: </label>
+            <input id="password" type="password" name="password" style="font-family: Ubuntu; border: solid #a1a0a0" placeholder="password" >
+        </div>
+        
+        <button type="submit">Login</button>
+    </form>
+
+
+
+    {% endblock secondBase %}
+
+
+
+{% endblock content %}
+
+
+
+

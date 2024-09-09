@@ -1,0 +1,99 @@
+
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+
+
+    <style>
+        @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                to { 
+                    transform: rotate(360deg);
+                }
+            }
+             
+            
+             @-webkit-keyframes rotate {
+                from {
+                    -webkit-transform: rotate(0deg);
+                }
+                to { 
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+            
+            .load {
+                width: 100px;
+                height: 100px;
+                margin: 110px auto 0;
+                border:solid 10px rgba(35, 79, 255, 0.667);
+                border-radius: 50%;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                 -webkit-transition: all 0.5s ease-in;
+                -webkit-animation-name:             rotate; 
+                -webkit-animation-duration:         1.0s; 
+                -webkit-animation-iteration-count:  infinite;
+                -webkit-animation-timing-function: linear;
+                    
+                     transition: all 0.5s ease-in;
+                animation-name:             rotate; 
+                animation-duration:         1.0s; 
+                animation-iteration-count:  infinite;
+                animation-timing-function: linear; 
+            }
+    </style>
+
+
+
+{% extends './base.html' %}
+{% block content %}
+    
+    {% include './secondBase.html' %}
+
+    {% block secondBase %}
+        
+    <br>
+
+        <a href="#Saved Blog Posts">Saved Blog Posts</a>
+
+
+<h1>AI Blog Generator</h1>
+        Please enter your YouTube video link here <br> <br>
+
+        <input id="youtubeLink" type="url" placeholder="Enter Your YouTube Link" size="50">
+        <button id="generateButton" style="background-color: rgba(35, 79, 255, 0.667); font-family: Bungee Tint;" >Generate</button>
+<br> <br>
+
+<section>
+        <h3>Generated Blog Display</h3>
+        <div id="loadingCircle" class="load" style="display: none;">
+                
+        </div>
+        <div id="BlogContent">
+                dfasfasdfadsf
+        </div>
+</section>
+
+<br><br><br>
+
+give git link in footer
+<footer>
+        ai blog generator by <a href="">mehran</a>
+</footer>
+
+{% endblock secondBase %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
