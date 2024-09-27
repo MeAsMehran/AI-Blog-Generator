@@ -20,8 +20,15 @@
 
     <br>
         
-    {{ error }}
+    {% if error %}
+    	<div>
+            <h2>
+                {{ error }}
+            </h2>
+        </div>
+    {% endif %} 
 
+    
     <br>
     
 
